@@ -167,18 +167,22 @@
 //    default: console.log('ikke vokal')
 //};
 // oppgave 16
-var farge = document.getElementById("color");
-farge.style.color='red' 
+var farge = document.getElementById("color").style.color;
+farge = "red";
 
-switch(farge){
+switch (farge) {
+  case "black":
+    console.log("black");
+    farge = "black";
+    break;
+  case "red":
+    console.log("red");
+    document.getElementById("color").style.color = "red";
+    break;
 
-    case "red":
-        {farge.style.color='red' }
-    case "blue":
-        {farge.style.color='blue' }
-    case "black":
-        {farge.style.color='black' }
-    
-    default: console.log('unavailable')
-};
+  default:
+    console.log("unavailable");
+    break;
+}
+
 
